@@ -21,7 +21,12 @@
                             <input type="number" class="form-control" name="inputKeyPlain" placeholder="Input Key" required/>
                         </div>
                         <button type="submit" class="btn btn-primary">Encrypt</button>
-                    </form>
+                        <div class="mb-3">
+                            <label class="form-label">Cipher text:</label>
+                            <input type="text" class="form-control" name="inputCipherText" value="{{inputCipherText}}" readonly/>
+                        </div>
+                    </form> 
+                
                 </td>
             </tr>
 
@@ -38,10 +43,17 @@
                             <input type="number" class="form-control" name="inputKeyCipher" placeholder="Input Key" required/>
                         </div>
                         <button type="submit" class="btn btn-success">Decrypt</button>
+                        <div class="mb-3">
+                            <label class="form-label">Plain text:</label>
+                            <input type="text" class="form-control" name="inputPlainText" value="{{inputPlainText}}" readonly/>
+                        </div>
                     </form>
                 </td>
             </tr>
         </table>
+        <div class="mt-4">
+            <a href="/" class="btn btn-secondary">Trang chủ</a>
+        </div>
     </div>
   </body>
 </html>

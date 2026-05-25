@@ -24,6 +24,10 @@
                             <input type="number" class="form-control" name="inputKey" min="2" placeholder="Input key ≥ 2" required/>
                         </div>
                         <button type="submit" class="btn btn-primary">Encrypt</button>
+                        <div class="mb-3">
+                            <label class="form-label">Cipher text:</label>
+                            <input type="text" class="form-control" name="inputCipherText" value="{{inputCipherText}}" readonly/>
+                        </div>
                     </form>
                 </td>
             </tr>
@@ -41,6 +45,10 @@
                             <input type="number" class="form-control" name="inputKey" min="2" placeholder="Input key ≥ 2)" required/>
                         </div>
                         <button type="submit" class="btn btn-success">Decrypt</button>
+                        <div class="mb-3">
+                            <label class="form-label">Plain text:</label>
+                            <input type="text" class="form-control" name="inputPlainText" value="{{inputPlainText}}" readonly/>
+                        </div>
                     </form>
                 </td>
             </tr>

@@ -26,8 +26,7 @@ def caesar_encrypt():
     Caesar = CaesarCipher()
 
     encrypted_text = Caesar.encrypt_text(text, key)
-
-    return f"text: {text}<br/>key: {key}<br/>encrypted text: {encrypted_text}"
+    return render_template("caesar.html", inputCipherText=encrypted_text)
 
 
 @app.route("/caesar/decrypt", methods=["POST"])
@@ -39,7 +38,7 @@ def caesar_decrypt():
 
     decrypted_text = Caesar.decrypt_text(text, key)
 
-    return f"text: {text}<br/>key: {key}<br/>decrypted text: {decrypted_text}"
+    return render_template("caesar.html", inputPlainText=decrypted_text)
 
 #vigenere
 # router routes for vigenere cypher
@@ -57,7 +56,7 @@ def vigenere_encrypt():
 
     encrypted_text = Vigenere.vigenere_encrypt(text, key)
 
-    return f"text: {text}<br/>key: {key}<br/>encrypted text: {encrypted_text}"
+    return render_template("vigenere.html", inputCipherText=encrypted_text)
 
 
 @app.route("/vigenere/decrypt", methods=["POST"])
@@ -69,7 +68,7 @@ def vigenere_decrypt():
 
     decrypted_text = Vigenere.vigenere_decrypt(text, key)
 
-    return f"text: {text}<br/>key: {key}<br/>decrypted text: {decrypted_text}"
+    return render_template("vigenere.html", inputPlainText=decrypted_text)
 
 #rail
 @app.route("/railfence")
@@ -90,14 +89,8 @@ def railfence_encrypt():
     RailFence = RailFenceCipher()
     encrypted_text = RailFence.rail_fence_encrypt(text, rails)
 
-    return f"""
-    <pre>
-Plain text  : {text}
-Rails (key) : {rails}
-Cipher text : {encrypted_text}
-    </pre>
-    <br><a href="/railfence"> Quay lại</a>
-    """
+    return render_template("railfence.html", inputCipherText=encrypted_text)
+
 
 
 @app.route("/railfence/decrypt", methods=["POST"])
@@ -113,14 +106,9 @@ def railfence_decrypt():
     RailFence = RailFenceCipher()
     decrypted_text = RailFence.rail_fence_decrypt(text, rails)
 
-    return f"""
-    <pre>
-Cipher text : {text}
-Rails (key) : {rails}
-Plain text  : {decrypted_text}
-    </pre>
-    <br><a href="/railfence"> Quay lại</a>
-    """
+    return render_template("railfence.html", inputPlainText=decrypted_text)
+
+    
 # playfair
 @app.route("/playfair")
 def playfair():
@@ -138,13 +126,8 @@ def playfair_encrypt():
     # Tạo chuỗi hiển thị ma trận
     matrix_str = "<br/>".join([" ".join(row) for row in matrix])
 
-    return f"""
-Plain text : {text}<br/>
-Key        : {key}<br/>
-Playfair Matrix:<br/>{matrix_str}<br/>
-Cipher text: {encrypted_text}<br/>
-<a href="/playfair"> Quay lại</a>
-"""
+    return render_template("playfair.html", inputCipherText=encrypted_text)
+
 
 @app.route("/playfair/decrypt", methods=["POST"])
 def playfair_decrypt():
@@ -158,13 +141,8 @@ def playfair_decrypt():
     # Tạo chuỗi hiển thị ma trận
     matrix_str = "<br/>".join([" ".join(row) for row in matrix])
 
-    return f"""
-Cipher text : {text}<br/>
-Key         : {key}<br/>
-Playfair Matrix:<br/>{matrix_str}<br/>
-Plain text  : {decrypted_text}<br/>
-<a href="/playfair"> Quay lại</a>
-"""
+    return render_template("playfair.html", inputPlainText=decrypted_text)
+
 
 # transposition
 @app.route("/transposition")
@@ -181,7 +159,7 @@ def transposition_encrypt():
 
     encrypted_text = Transposition.encrypt(text, key)
 
-    return f"text: {text}<br/>key: {key}<br/>encrypted text: {encrypted_text}"
+    return render_template("transposition.html", inputCipherText=encrypted_text)
 
 @app.route("/transposition/decrypt", methods=["POST"])
 def transposition_decrypt():
@@ -193,7 +171,7 @@ def transposition_decrypt():
 
     decrypted_text = Transposition.decrypt(text, key)
 
-    return f"text: {text}<br/>key: {key}<br/>decrypted text: {decrypted_text}"
+    return render_template("transposition.html", inputPlainText=decrypted_text)
 
 # main function
 if __name__ == "__main__":
