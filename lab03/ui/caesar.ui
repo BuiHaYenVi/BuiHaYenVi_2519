@@ -6,50 +6,50 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>664</width>
-    <height>495</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPlainTextEdit" name="txt_PlainText">
+   <widget class="QPlainTextEdit" name="txt_P">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>160</x>
       <y>90</y>
       <width>521</width>
       <height>91</height>
      </rect>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="txt_Key">
+   <widget class="QPlainTextEdit" name="txt_K">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>160</x>
       <y>210</y>
       <width>521</width>
       <height>31</height>
      </rect>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="txt_CipherText">
+   <widget class="QPlainTextEdit" name="txt_C">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>160</x>
       <y>260</y>
       <width>521</width>
       <height>101</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="lbl_CaesarCipher">
+   <widget class="QLabel" name="lbl_C">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>300</x>
       <y>20</y>
-      <width>231</width>
+      <width>191</width>
       <height>51</height>
      </rect>
     </property>
@@ -65,12 +65,12 @@
      <string>CAESAR CIPHER</string>
     </property>
    </widget>
-   <widget class="QLabel" name="lbl_PlainText">
+   <widget class="QLabel" name="lbl_P">
     <property name="geometry">
      <rect>
-      <x>16</x>
+      <x>56</x>
       <y>90</y>
-      <width>81</width>
+      <width>71</width>
       <height>20</height>
      </rect>
     </property>
@@ -85,10 +85,10 @@
      <string>Plain text:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="lbl_Key">
+   <widget class="QLabel" name="lbl_K">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>60</x>
       <y>210</y>
       <width>51</width>
       <height>20</height>
@@ -103,12 +103,12 @@
      <string>Key:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="lbl_CipherText">
+   <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>60</x>
       <y>260</y>
-      <width>91</width>
+      <width>81</width>
       <height>21</height>
      </rect>
     </property>
@@ -121,10 +121,10 @@
      <string>CipherText:</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_Encrypt">
+   <widget class="QPushButton" name="btn_E">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>200</x>
       <y>410</y>
       <width>75</width>
       <height>31</height>
@@ -139,10 +139,10 @@
      <string>Encrypt</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_Decrypt">
+   <widget class="QPushButton" name="btn_D">
     <property name="geometry">
      <rect>
-      <x>510</x>
+      <x>550</x>
       <y>410</y>
       <width>75</width>
       <height>31</height>
@@ -163,8 +163,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>664</width>
-     <height>26</height>
+     <width>800</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

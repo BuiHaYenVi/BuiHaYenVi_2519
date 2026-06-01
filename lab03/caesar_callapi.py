@@ -10,20 +10,20 @@ class MyApp(QMainWindow):
         self.ui.setupUi(self)
         
         # Kết nối các nút bấm với hàm xử lý
-        self.ui.btn_Encrypt.clicked.connect(self.call_api_encrypt)
-        self.ui.btn_Decrypt.clicked.connect(self.call_api_decrypt)
+        self.ui.btn_E.clicked.connect(self.call_api_encrypt)
+        self.ui.btn_D.clicked.connect(self.call_api_decrypt)
 
     def call_api_encrypt(self):
         url = "http://127.0.0.1:5000/api/caesar/encrypt"
         payload = {
-            "plain_text": self.ui.txt_PlainText.toPlainText(),
-            "key": self.ui.txt_Key.toPlainText()
+            "plain_text": self.ui.txt_P.toPlainText(),
+            "key": self.ui.txt_K.toPlainText()
         }
         try:
             response = requests.post(url, json=payload)
             if response.status_code == 200:
                 data = response.json()
-                self.ui.txt_CipherText.setPlainText(data["encrypted_message"])
+                self.ui.txt_C.setPlainText(data["encrypted_message"])
                 
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Information)
@@ -37,14 +37,14 @@ class MyApp(QMainWindow):
     def call_api_decrypt(self):
         url = "http://127.0.0.1:5000/api/caesar/decrypt"
         payload = {
-            "cipher_text": self.ui.txt_CipherText.toPlainText(),
-            "key": self.ui.txt_Key.toPlainText()
+            "cipher_text": self.ui.txt_C.toPlainText(),
+            "key": self.ui.txt_K.toPlainText()
         }
         try:
             response = requests.post(url, json=payload)
             if response.status_code == 200:
                 data = response.json()
-                self.ui.txt_PlainText.setPlainText(data["decrypted_message"])
+                self.ui.txt_P.setPlainText(data["decrypted_message"])
                 
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Information)

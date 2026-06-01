@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1215</width>
+    <height>510</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>10</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>RSA CIPHER</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_P">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>130</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Plain text:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_C">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>260</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ciphertext:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_Sig">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>260</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Signature:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_In">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>130</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Information:</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="txt_P">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>130</y>
+      <width>481</width>
+      <height>87</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="txt_C">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>260</y>
+      <width>481</width>
+      <height>87</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="txt_In">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>130</y>
+      <width>481</width>
+      <height>87</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="txt_Signature">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>260</y>
+      <width>481</width>
+      <height>87</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_En">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>370</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Encrypt</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Gen">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>50</y>
+      <width>111</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Generate Keys</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_De">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>370</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Decrypt</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Sign">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>370</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sign</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_Verify">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>370</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Verify</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1215</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
