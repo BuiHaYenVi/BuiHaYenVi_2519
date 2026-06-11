@@ -53,23 +53,16 @@ def handle_client(client_socket, client_address):
     clients.append((client_socket, aes_key))
 
     while True:
-        try:
-            encrypted_message = client_socket.recv(1024)
-            if not encrypted_message:
-                break
-                
-            decrypted_message = decrypt_message(aes_key, encrypted_message)
-            print(f"Received from {client_address}: {decrypted_message}")
+        encrypted_message = client_socket.recv(1024)
+        decrypted_message = decrypt_message(aes_key, encrypted_message)
+        print(f"Received from {client_address}: {decrypted_message}")
 
-            if decrypted_message == "exit":
-                break
-
-            # Send received message to all other clients
-            for client, key in clients:
-                if client != client_socket:
-                    encrypted = encrypt_message(key, decrypted_message)
-                    client.send(encrypted)
-        except:
+        # Send received message to all other clients
+        for client, key in clients:
+            if client != client_socket:
+                encrypted = encrypt_message(key, decrypted_message)
+                client.send(encrypted)
+        if decrypted_message == "exit":
             break
 
     clients.remove((client_socket, aes_key))

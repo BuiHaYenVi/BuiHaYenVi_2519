@@ -43,15 +43,9 @@ def decrypt_message(key, encrypted_message):
 # Function to receive messages from server
 def receive_messages():
     while True:
-        try:
-            encrypted_message = client_socket.recv(1024)
-            if not encrypted_message:
-                break
-            decrypted_message = decrypt_message(aes_key, encrypted_message)
-            print(f"\nReceived: {decrypted_message}")
-            print("Enter message ('exit' to quit): ", end="")
-        except:
-            break
+        encrypted_message = client_socket.recv(1024)
+        decrypted_message = decrypt_message(aes_key, encrypted_message)
+        print(f"\nReceived: {decrypted_message}")
 
 # Start the receiving thread
 receive_thread = threading.Thread(target=receive_messages)
