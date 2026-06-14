@@ -1,6 +1,6 @@
-__pycache__/
-*.pyc
-__platform__/
-*.dll
-*.pem
-keys/
+    __pycache__/
+    *.pyc
+    __platform__/
+    *.dll
+    *.pem
+    keys/
