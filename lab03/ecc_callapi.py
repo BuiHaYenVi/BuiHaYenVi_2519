@@ -28,7 +28,7 @@ class MyApp(QMainWindow):
             print("Error: %s" % e.message)
 
     def call_api_sign(self):
-        url = "http://127.0.0.1:5000/api/rsa/sign"
+        url = "http://127.0.0.1:5000/api/ecc/sign"
         payload = {
             "message": self.ui.txt_In.toPlainText(),
         }
@@ -48,7 +48,7 @@ class MyApp(QMainWindow):
             print("Error: %s" % e.message)
 
     def call_api_verify(self):
-        url = "http://127.0.0.1:5000/api/rsa/verify"
+        url = "http://127.0.0.1:5000/api/ecc/verify"
         payload = {
             "message": self.ui.txt_In.toPlainText(),
             "signature": self.ui.txt_Signature.toPlainText()
